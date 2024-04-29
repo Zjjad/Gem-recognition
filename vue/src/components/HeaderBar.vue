@@ -49,27 +49,27 @@ export default {
 <div>
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <router-link class="navbar-brand" to="/Index">Navbar</router-link>
+            <router-link class="navbar-brand" to="/Index">宝石系统</router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <router-link class="nav-link active" aria-current="page" to="/Index">Home</router-link>
+                        <router-link class="nav-link active" aria-current="page" to="/Index">主页</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link active" to="/ShopPage">Shop</router-link>
+                        <router-link class="nav-link active" to="/ShopPage">宝石识别</router-link>
                     </li>
                     <li class="nav-item">
-                      <router-link class="nav-link active" to="/ProductPump">Pump</router-link>
+                      <router-link class="nav-link active" to="/ProductPump">宝石风格转化</router-link>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <router-link class="nav-link active" to="/FeedbackPage">Feedback</router-link>
-                    </li>
-                    <li class="nav-item">
+                    </li> -->
+                    <!-- <li class="nav-item">
                         <router-link class="nav-link active" to="/">About</router-link>
-                    </li>
+                    </li> -->
                 </ul>
                 <ul class="nav justify-content-end">
                     <!-- 使用v-if和v-else来根据user_id的值显示不同的链接 -->

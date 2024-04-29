@@ -1,37 +1,70 @@
 <template>
-    <div>
-        <header-bar></header-bar>
-    </div>
-    <div class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="content">
-                        <h1 class="page-name">Shop</h1>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><router-link style="text-decoration: none" to="/">Home</router-link></li>
-                                <li class="breadcrumb-item active" aria-current="page">Shop</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <product-list></product-list>
-    <footer-bar></footer-bar>
-</template>
-<script>
-import HeaderBar from "@/components/HeaderBar.vue";
-import { defineComponent } from "vue";
-import FooterBar from "@/components/FooterPage.vue";
-import ProductList from "@/components/ProductPage.vue";
+  <header-bar></header-bar>
+  <div  style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <input type="file" @change="handleFileUpload">
+    <img :src="originalImageUrl" v-if="originalImageUrl" alt="Uploaded Image">
+    <button @click="uploadImage">上传图片</button>
+    <p>预测结果:{{prediction}}</p>
 
-export default defineComponent({
-    components: {ProductList, FooterBar, HeaderBar }
-})
+<!--    <div >-->
+<!--      <div >-->
+<!--        <img :src="'data:image;base64,'+image">-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+  <footer-bar></footer-bar>
+</template>
+
+<script >
+import axios from "axios";
+import HeaderBar from "@/components/HeaderBar.vue";
+import FooterBar from "@/components/FooterPage.vue";
+
+export default {
+  components: {FooterBar, HeaderBar},
+  data() {
+    return {
+      // image:'',
+      file: null,
+      originalImageUrl:null,
+      prediction:""
+    };
+  },
+  mounted() {
+    // this.gain();
+  },
+  methods: {
+    handleFileUpload(event) {
+      this.file = event.target.files[0];
+      this.originalImageUrl =URL.createObjectURL(this.file);
+    },
+    uploadImage() {
+      let formData = new FormData();
+      formData.append('image', this.file);
+
+      axios.post('http://127.0.0.1:9200/predict', formData)
+          .then(response => {
+            console.log(response.data);
+            // 更新识别结果
+            this.prediction = response.data;
+            console.log(this.prediction);
+            // Handle response
+          })
+          .catch(error => {
+            console.error('Error uploading image: ', error);
+          });
+    },
+    // gain(){
+    //   axios.get('http://localhost:8081/file/images').then((res)=>{
+    //     console.log(res)
+    //     this.image = res.data.data[0];
+    //     // this.$message.success('图片获取成功');
+    //     console.log('图片获取成功');
+    //   }).catch(()=>{
+    //     // this.$message.error('图片获取失败');
+    //     console.log('图片获取失败');
+    //   })
+    // },
+  }
+};
 </script>
-<style>
-@import "../css/_common.css";
-</style>

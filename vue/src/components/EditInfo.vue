@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12 d-flex justify-content-center">
                     <div class="content">
-                        <h1 class="page-name">Welcome</h1>
+                        <h1 class="page-name">Welcome1</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><router-link style="text-decoration: none" to="/">Home</router-link></li>
