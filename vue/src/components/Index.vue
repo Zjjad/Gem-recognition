@@ -2,7 +2,7 @@
     <div>
         <header-bar></header-bar>
     </div>
-    <div class="TopPicture h-75">
+    <!-- <div class="TopPicture h-75">
         <div id="carouselExampleCaptions" class="carousel slide mx-auto w-75" data-bs-ride="carousel" >
           <button
               v-for="(indicator, index) in carouselIndicators"
@@ -14,6 +14,7 @@
               aria-label="Slide {{ index + 1 }}"
               aria-current="true"
           ></button>
+          
             <div class="carousel-inner">
               <div v-for="(image, index) in images" :key="index" :class="{ 'carousel-item': true, 'active': index === 0 }" data-bs-interval="3000">
                 <img :src="'data:image;base64,' + image" class="d-block w-100" alt="...">
@@ -23,6 +24,7 @@
                 </div>
               </div>
             </div>
+            
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -32,8 +34,27 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </div>
-    <div class="mid">
+    </div> -->
+    <div style="width: 100%;height: 800px;background-color: blue;"></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>名字</p></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>名字</p></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>名字</p></div>
+    <div style="width: 33%;float: left;display:flex; align-items:center; justify-content:center;"><img src="..\assets\product_1.jpg" style="width: 300px;height: 300px;"></div>
+    <div style="width: 33%;float: left;display:flex; align-items:center; justify-content:center;"><img src="..\assets\product_1.jpg" style="width: 300px;height: 300px;"></div>
+    <div style="width: 33%;float: left;display:flex; align-items:center; justify-content:center;"><img src="..\assets\product_1.jpg" style="width: 300px;height: 300px;"></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>1111</p></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>1111</p></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>1111</p></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>名字</p></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>名字</p></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>名字</p></div>
+    <div style="width: 33%;float: left;display:flex; align-items:center; justify-content:center;"><img src="..\assets\product_1.jpg" style="width: 300px;height: 300px;"></div>
+    <div style="width: 33%;float: left;display:flex; align-items:center; justify-content:center;"><img src="..\assets\product_1.jpg" style="width: 300px;height: 300px;"></div>
+    <div style="width: 33%;float: left;display:flex; align-items:center; justify-content:center;"><img src="..\assets\product_1.jpg" style="width: 300px;height: 300px;"></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>1111</p></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>1111</p></div>
+    <div style="width: 33%;height: 100px;float: left;display:flex; align-items:center; justify-content:center;"><p>1111</p></div>
+    <!-- <div class="mid">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -74,7 +95,7 @@
               </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="product">
         <div class="container">
             <div class="row">
@@ -83,6 +104,7 @@
                 </div>
             </div>
           <div class="row">
+            
             <div class="col-md-4" v-for="(product, index) in products" :key="product.product_id" >
               <div class="product-item">
                 <div class="product-thumb">
@@ -104,9 +126,11 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div class="title">
+                        
                         <h2>SUBSCRIBE TO NEWSLETTER</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, <br> facilis numquam impedit ut sequi. Minus facilis vitae excepturi sit laboriosam.</p>
                     </div>
+                    
                     <div class="input-group input-group-lg mb-3 w-50 m-auto">
                         <input type="text" class="form-control" placeholder="Enter Your Email Address" aria-label="Recipient's username" aria-describedby="button-addon2">
                         <button class="btn btn-dark" type="button">Subscribe Now!</button>
@@ -127,6 +151,7 @@
     <footer-bar></footer-bar>
   <div class="hello">
   </div>
+
 </template>
 
 <script>
@@ -201,6 +226,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .TopPicture {
     padding-bottom: 80px;
 }
@@ -373,3 +399,4 @@ export default {
     object-fit: cover;
 }
 </style>
+
